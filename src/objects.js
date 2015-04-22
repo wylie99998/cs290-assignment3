@@ -10,7 +10,7 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return {type: "Goldfish", brand: "Pepperidge Farm", flavor: "Cheddar", count: 2000}; //Modify ONLY this line
   //end your code
 }
 
@@ -38,7 +38,10 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user_Input){
+	this.user = user_Input;  //inprogress
 
+}
 //end your code
 
 /**

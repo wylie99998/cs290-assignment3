@@ -106,7 +106,7 @@ function parseGit(logArray){
 	var foo = [];
      for(j =0; j < git_hash.length; j++){
 	 foo[j] = new GitLog(git_hash[j][0], new Date(date[j]), message[j][1]);
-
+    // use of second array to ensure only the data we want
 	}
 	return foo;
 }
