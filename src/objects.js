@@ -39,8 +39,21 @@ function returnObjectLiteral() {
 
 //your code here
 function MessageLog(user_Input){
-	this.user = user_Input;  //inprogress
+	this.user = user_Input;  //inprogress?
 
+    function logMessage(messageText, direction){
+        this.messageText = messageText;
+        this.direction = direction; 
+    }
+    function getSentMessage(n){
+    	//return sring of n message
+    }
+    function totalSent(){
+    	//return number sent
+    }
+    function totalRecieved(){
+    	//return recieved
+    }
 }
 //end your code
 
@@ -50,7 +63,7 @@ function MessageLog(user_Input){
 * received.
 */
 //your code here
-
+//function MessageLog()
 //end your code
 
 /**
