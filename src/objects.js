@@ -40,21 +40,87 @@ function returnObjectLiteral() {
 //your code here
 function MessageLog(user_Input){
 	this.user = user_Input;  //inprogress?
-
+    this.messageText = [];
+    this.direction = [];
+     this.n = 0;
+   /*
     function logMessage(messageText, direction){
-        this.messageText = messageText;
-        this.direction = direction; 
+        this.messageText[n] = messageText;
+        this.direction[n] = direction; 
+        n++;
     }
     function getSentMessage(n){
-    	//return sring of n message
+    	//return string of n message
+        if(n > 4)
+            consol.log("ERROR");
+        else
+            for(i=0;i < n.length; i++){
+                var temp =0;
+            if(direction[i] == 0)
+                temp++;
+            if(temp == n)
+                return messageText[i];
+        }
+        return n + " sent message not found";
     }
     function totalSent(){
     	//return number sent
+        var temp = 0;
+        for(i=0; i < n.length; i++){
+            if(direction[i] == 0)
+                temp ++;
+        }
+        return temp;
     }
     function totalRecieved(){
     	//return recieved
-    }
+        var temp = 0;
+        for(i=0; i < n.length; i++){
+            if(direction[i] == 1)
+                temp ++;
+        }
+        return temp;
+    }  */
 }
+
+MessageLog.prototype.logMessage = function(messageText, direction){
+        this.messageText[this.n] = messageText;
+        this.direction[this.n] = direction; 
+        this.n = this.n + 1;
+    }
+     MessageLog.prototype.getSentMessage = function(num){
+        //return string of n message
+        var temp =0;
+        if(num > 5)
+            consol.log("ERROR");
+        else
+            for(i= this.n; i >= 0; i--){
+                
+            if(this.direction[i] == 0)
+                temp++;
+            if(temp == num +1)
+                return this.messageText[i];
+        }
+        return num + " sent message not found";
+    };
+    MessageLog.prototype.totalSent = function(){
+        //return number sent
+        var temp = 0;
+        for(i=0; i <= this.n; i++){
+            if(this.direction[i] == 0)
+                temp ++;
+        }
+        return temp;
+    }
+    MessageLog.prototype.totalReceived = function(){
+        //return recieved
+        var temp = 0;
+        for(i=0; i <= this.n; i++){
+            if(this.direction[i] == 1)
+                temp ++;
+        }
+        return temp;
+    }
 //end your code
 
 /**
@@ -63,7 +129,10 @@ function MessageLog(user_Input){
 * received.
 */
 //your code here
-//function MessageLog()
+MessageLog.prototype.lastReceivedMessage = function(){
+    var temp = this.totalReceived();
+    return this.messageText[temp -1];
+}
 //end your code
 
 /**
@@ -73,5 +142,8 @@ function MessageLog(user_Input){
 */
 
 //your code here
-
+var myLog = new MessageLog("BlackHatGuy");
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz",1);
 //end your code
