@@ -1,1 +1,23 @@
-You log goes in this  file.
+
+Start: Sun, 19 Apr 2015 18:30:00 -0800
+End: Sun, 19 Apr 2015 22:50:00 -0800
+Tasks: During this period I started work on the variables.js and function.js files
+and completed in its entirety variables.js and part of functions as well as getting used
+to using the provided test html file.  
+
+Start: Mon, 20 Apr 2015 19:15:00 -0800
+End: Mon, 20 Apr 2015 21:50:00 -0800
+Tasks: During this period I continued my work on the functions.js file and went back to 
+the variables file to fix a previously missed mistake.  
+
+Start: Tue, 21 Apr 2015 20:15:00 -0800
+End: Tue, 21 Apr 2015 23:00:00 -0800
+Tasks: During this period I finished all work on the functions.js file and started on the
+objects.js file which gave me more trouble than the previous two. After a few hours
+I stopped for the day despite less than satisfactory progress.  
+
+   
+Start: Wed, 22 Apr 2015 13:15:00 -0800
+End: Wed, 22 Apr 2015 17:45:00 -0800
+Tasks: During this period I completed the objects.js file and part 1 of the assignment. 
+the Log for part 2 will be in the part 2 repo.   
